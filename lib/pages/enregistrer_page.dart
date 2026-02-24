@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:initiation_flutter/widgets/safari_button.dart';
 import 'package:initiation_flutter/widgets/safari_textfield.dart';
 
-class ConnexionPage extends StatelessWidget {
+class EnregistrerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,18 +36,24 @@ class ConnexionPage extends StatelessWidget {
                 obscureText: true,
               ),
               SizedBox(height: 30),
-              SafariButton(libelle: "Connectez-vous", onPressed: () {}),
+              SafariTextField(
+                hintText: " confirmer Mot de passe",
+                icon: Icons.password,
+                obscureText: true,
+              ),
+              SizedBox(height: 30),
+              SafariButton(libelle: "S'enregistrer", onPressed: () {}),
               SizedBox(height: 30),
               Text(
-                "Pas encore connecte ? ",
+                "Déjà enregistré ? ",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.inter(color: Colors.white, fontSize: 16),
               ),
               SizedBox(height: 30),
               SafariButton(
-                libelle: "Creer un ompte",
+                libelle: "Se connecter",
                 onPressed: () {
-                  Navigator.of(context).pushNamed("/enregistrer");
+                  Navigator.of(context).pushNamed("/");
                 },
               ),
             ],
